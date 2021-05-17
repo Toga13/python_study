@@ -13,9 +13,9 @@ class Character:
         print ("防御力："f"{self.difensive_power}")
         print ("スピード："f"{self.speed}")
 
-class Hero(Character):
+class Brave(Character):
     def __init__(self, name, hp, offensive_power, difensive_power, speed):
-        super (Hero, self).__init__(name, hp, offensive_power, difensive_power, speed)
+        super (Brave, self).__init__(name, hp, offensive_power, difensive_power, speed)
 
     def attack(self, enemy):
         enemy_hp = enemy.hp
@@ -59,10 +59,10 @@ class Enemy(Character):
         super (Enemy, self).__init__(name, hp, offensive_power, difensive_power, speed)
 
 hero_name = input ('Heroの名前')
-hero_hp = input ('HeroのHPを入力してください')
+#hero_hp = input ('HeroのHPを入力してください')
 
 
-hero = Hero(hero_name), hero_hp, 50, 30, 50)
+hero = Brave(hero_name, 100, 50, 30, 50)
 enemy = Enemy("バイキンマン", 120, 40, 40, 40)
 hero.display()
 enemy.display()
